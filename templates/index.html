@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Türkçe Fıkra Uygulaması</title>
+</head>
+<body>
+    <h1>Rastgele Türkçe Fıkra Uygulaması</h1>
+
+    <form method="POST">
+        <h3>Fıkra kategorisi seçin:</h3>
+        <select name="category">
+            <option value="karadeniz">Karadeniz</option>
+            <option value="nasreddin_hoca">Nasreddin Hoca</option>
+            <option value="anadolu">Anadolu</option>
+        </select>
+        <button type="submit">Fıkra Getir</button>
+    </form>
+
+    {% if joke %}
+    <div class="joke-container">
+        <h3>{{ category }} Fıkrası</h3>
+        <p>{{ joke }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
