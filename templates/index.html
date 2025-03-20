@@ -2,26 +2,128 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Türkçe Fıkra Üreticisi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        .joke-container {
+            background-color: #f1f1f1;
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            border-radius: 0 6px 6px 0;
+            margin-top: 30px;
+        }
+
+        .joke-container h3 {
+            color: #e74c3c;
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .joke-container p {
+            font-size: 18px;
+            line-height: 1.7;
+            white-space: pre-line;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Rastgele Türkçe Fıkra Üreticisi</h1>
+    <div class="container">
+        <h1>Rastgele Türkçe Fıkra Üreticisi</h1>
 
-    <form method="POST">
-        <h3>Fıkra kategorisi seçin:</h3>
-        <select name="category">
-            <option value="karadeniz">Karadeniz</option>
-            <option value="nasreddin_hoca">Nasreddin Hoca</option>
-            <option value="anadolu">Anadolu</option>
-        </select>
-        <button type="submit">Fıkra Getir</button>
-    </form>
+        <form method="POST">
+            <div class="form-group">
+                <h3>Fıkra kategorisi seçin:</h3>
+                <select name="category">
+                    <option value="karadeniz">Karadeniz</option>
+                    <option value="nasreddin_hoca">Nasreddin Hoca</option>
+                    <option value="anadolu">Anadolu</option>
+                </select>
+                <button type="submit">Fıkra Getir</button>
+            </div>
+        </form>
 
-    {% if joke %}
-    <div class="joke-container">
-        <h3>{{ category }} Fıkrası</h3>
-        <p>{{ joke }}</p>
+        {% if joke %}
+        <div class="joke-container">
+            <h3>{{ category }} Fıkrası</h3>
+            <p>{{ joke }}</p>
+        </div>
+        {% endif %}
     </div>
-    {% endif %}
 </body>
 </html>
