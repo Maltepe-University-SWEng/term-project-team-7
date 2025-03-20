@@ -21,7 +21,7 @@ def generate_joke_from_ollama(category):
         return "Geçersiz kategori seçildi."
 
     data = {
-        "model": "deepseek-coder",
+        "model": "deepseek-r1:8b",
         "prompt": prompt,
         "stream": False
     }
