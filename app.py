@@ -8,6 +8,8 @@ def generate_joke_from_ollama(category):
     """
     Ollama'dan belirtilen kategoride fıkra üretir
     """
+    print(f"Debug: Fıkra üretme fonksiyonu çağrıldı. Kategori: {category}")
+
     url = "http://localhost:11434/api/generate"
 
     # Kategori bazında prompt oluşturma
