@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Türkçe Fıkra Üreticisi</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Genel sayfa ayarları: Siyah arka plan, beyaz yazı, ve :=) desenleri */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJibGFjayIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGFsaWdubWVudC1iYXNlbGluPSJtaWRkbGUiPjo9KTwvdGV4dD48L3N2Zz4=");
+      background-repeat: repeat;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Üst başlık alanı: Sabit siyah arka plan, desen örtülür */
+    .page-header {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+      background-color: #000;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 700;
+      color: #fff;
+    }
+    /* İçerik kartı: Deseni gizleyen koyu arka plan */
+    .fıkra-container {
+      background-color: #111;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    .form-group label {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .form-control {
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+    .btn-custom {
+      background: #c0392b;
+      border: none;
+      font-size: 1.1rem;
+      padding: 12px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .btn-custom:hover {
+      background: #a93226;
+    }
+    /* Mobil uyum */
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+      .fıkra-container {
+        margin: 0 15px 40px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Üst Başlık -->
+  <div class="page-header">
+    <h1>Türkçe Fıkra Üreticisi</h1>
+  </div>
+
+  <!-- İçerik Kartı: Form alanı -->
+  <div class="fıkra-container">
+    <form method="POST">
+      <div class="form-group">
+        <label for="category">Fıkra kategorisini seçin:</label>
+        <select name="category" id="category" class="form-control">
+          <option value="temel">Temel</option>
+          <option value="nasreddin_hoca">Nasreddin Hoca</option>
+          <option value="anadolu">Anadolu Fıkraları</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-custom btn-block">Fıkrayı Getir</button>
+    </form>
+  </div>
+
+  <!-- jQuery ve Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
