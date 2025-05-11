@@ -32,7 +32,7 @@ pip package manager
 🔧 Installation
 
 Clone the repository
-bashgit clone https://github.com/yourusername/turkish-joke-generator.git
+bashgit clone (https://github.com/Maltepe-University-SWEng/term-project-team-7)
 cd turkish-joke-generator
 
 Create and activate a virtual environment
